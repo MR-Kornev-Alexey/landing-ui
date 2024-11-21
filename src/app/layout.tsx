@@ -3,8 +3,11 @@ import {AppRouterCacheProvider} from '@mui/material-nextjs/v14-appRouter';
 import {ThemeProvider} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from '@/theme';
-import Footer from '@/components/footer/footer'
+import {Footer} from '@/components/footer'
 import {Header} from '@/components/header'
+import '../styles/globals.css'
+import Copyright from "@/components/Copyright";
+import TabBar from "@/components/tab-bar/tab-bar";
 
 export default function RootLayout(props: { children: React.ReactNode }) {
     return (
@@ -13,9 +16,11 @@ export default function RootLayout(props: { children: React.ReactNode }) {
         <AppRouterCacheProvider options={{enableCssLayer: true}}>
             <ThemeProvider theme={theme}>
                 <CssBaseline/>
-                {/*<Header/>*/}
+                <Header/>
                 {props.children}
                 <Footer/>
+                <Copyright />
+                <TabBar/>
             </ThemeProvider>
         </AppRouterCacheProvider>
         </body>

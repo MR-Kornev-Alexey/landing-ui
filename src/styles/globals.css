@@ -25,7 +25,13 @@
 
 body {
   /* background-color: var(--color-background); */
-  background-color: '#fff';
+  background-color: '#ffffff';
+}
+
+.box-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @-webkit-keyframes click_animation {

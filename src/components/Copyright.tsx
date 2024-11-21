@@ -1,21 +1,23 @@
-import * as React from 'react';
+import React from 'react';
 import Typography from '@mui/material/Typography';
-import MuiLink from '@mui/material/Link';
+import Link from '@mui/material/Link';
 
 export default function Copyright() {
-  return (
-    <Typography
-      variant="body2"
-      align="center"
-      sx={{
-        color: 'text.secondary',
-      }}
-    >
-      {'Copyright © '}
-      <MuiLink color="inherit" href="https://mui.com/">
-        Your Website
-      </MuiLink>{' '}
-      {new Date().getFullYear()}.
-    </Typography>
-  );
+    return (
+        <Typography
+            variant="subtitle1"
+            align="center"
+            sx={{
+                whiteSpace: 'nowrap',
+                display: { md:'flex', sm:'none', xs:'none' },
+                justifyContent: "center",
+            }}
+        >
+            {'Copyright © '}
+            <Link color="inherit" href="#" sx={{textDecoration: 'none'}} >
+                OOO ХЕЛЛОУ
+            </Link>{' '}
+            {new Date().getFullYear()}.
+        </Typography>
+    );
 }

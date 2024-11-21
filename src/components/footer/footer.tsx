@@ -1,36 +1,32 @@
-import React, { FC } from 'react'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import Container from '@mui/material/Container'
-import Typography from '@mui/material/Typography'
-import { FooterNavigation, FooterSocialLinks } from '@/components/footer'
+"use client"
+import React from 'react';
+import { Container, Box, Link, Typography } from '@mui/material';
 
-const Footer: FC = () => {
-  return (
-    <Box
-      component="footer"
-      sx={{ backgroundColor: 'primary.main', py: { xs: 6, md: 10 }, color: 'primary.contrastText' }}
-    >
-      <Container>
-        <Grid container spacing={1}>
-          <Grid item xs={12} md={5}>
-            <Box sx={{ width: { xs: '100%', md: 360 }, mb: { xs: 3, md: 0 } }}>
-              <Typography component="h2" variant="h2" sx={{ mb: 2 }}>
-                Coursespace
-              </Typography>
-              <Typography variant="subtitle1" sx={{ letterSpacing: 1, mb: 2 }}>
-                Coursespace is an online learning platform that has been operating since 2018 until now.
-              </Typography>
-              <FooterSocialLinks />
-            </Box>
-          </Grid>
-          <Grid item xs={12} md={7}>
-            <FooterNavigation />
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
-  )
-}
+const footersMenuContent = [
+    { title: "Документация", link: "#" },
+    { title: "Политика приватности", link: "#" },
+    { title: "Правовые документы", link: "#" },
+    { title: "Куки", link: "#" },
+    { title: "Вакансии", link: "#" },
+    { title: "О платформе", link: "#" },
+    { title: "ООО '\"ХЕЛЛОУ\"'", link: "#"},
+    { title: "Цены", link: "#" }
+];
 
-export default Footer
+const Footer = () => (
+    <Container maxWidth="lg" component="footer" sx={{ display: 'flex', justifyContent: "center", alignItems: "flex-end", height: 324, maxHeight: 324 }}>
+        <Box sx={{ display: 'flex', justifyContent: "center",  flexWrap: 'wrap', gap: 2, width: '100%', marginBottom: "119px"}}>
+            {footersMenuContent.map((item, index) => (
+                <Box key={index} sx={{ display: 'flex' }}>
+                    <Link href={item.link} target="_blank" sx={{ textDecoration: 'none' }}>
+                        <Typography variant="subtitle1" >
+                            {item.title}
+                        </Typography>
+                    </Link>
+                </Box>
+            ))}
+        </Box>
+    </Container>
+);
+
+export default Footer;

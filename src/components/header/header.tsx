@@ -1,69 +1,64 @@
 "use client"
-import React, { FC, useState } from 'react'
-import Box from '@mui/material/Box'
-import Container from '@mui/material/Container'
-import IconButton from '@mui/material/IconButton'
-import useMediaQuery from '@mui/material/useMediaQuery'
-import { Logo } from '@/components/logo'
-import { Navigation, AuthNavigation } from '@/components/navigation'
-import { useTheme } from '@mui/material/styles'
-import { Menu, Close } from '@mui/icons-material'
+import React from 'react';
+import { Container, Box, Link, Typography } from '@mui/material';
+import Logo  from "@/image/logo.svg";
 
-const Header: FC = () => {
-  const [visibleMenu, setVisibleMenu] = useState<boolean>(false)
-  const { breakpoints } = useTheme()
-  const matchMobileView = useMediaQuery(breakpoints.down('md'))
+const menuContent = [
+    {
+        title: 'О платформе',
+        link: '#',
+    },
+    {
+        title: 'Цены',
+        link: '#',
+    },
+    {
+        title: 'FAQ',
+        link: '#',
+    },
+    {
+        title: 'Документация',
+        link: '#',
+    },
+];
 
-  return (
-    <Box sx={{ backgroundColor: 'background.paper' }}>
-      <Container sx={{ py: { xs: 2, md: 3 } }}>
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <Logo />
-          <Box sx={{ ml: 'auto', display: { xs: 'inline-flex', md: 'none' } }}>
-            <IconButton onClick={() => setVisibleMenu(!visibleMenu)}>
-              <Menu />
-            </IconButton>
-          </Box>
-          <Box
+const Header = () => (
+    <Container maxWidth="lg" component="header" sx={{ display: 'flex', justifyContent: { md:'space-between', sm:'space-between', xs:'left' }, alignItems: "center", height: 79, maxHeight: 79 }}>
+        <Box
+            component="img"
             sx={{
-              width: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              flexDirection: { xs: 'column', md: 'row' },
-
-              transition: (theme) => theme.transitions.create(['top']),
-              ...(matchMobileView && {
-                py: 6,
-                backgroundColor: 'background.paper',
-                zIndex: 'appBar',
-                position: 'fixed',
-                height: { xs: '100vh', md: 'auto' },
-                top: visibleMenu ? 0 : '-120vh',
-                left: 0,
-              }),
+                width: '100%', // Установите ширину изображения
+                height: 'auto', // Автоматически подстраивает высоту под ширину
+                maxWidth:{ md:93, sm:70, xs:54 }, // Максимальная ширина изображения
             }}
-          >
-            <Box /> {/* Magic space */}
-            <Navigation />
-            <AuthNavigation />
-            {visibleMenu && matchMobileView && (
-              <IconButton
-                sx={{
-                  position: 'fixed',
-                  top: 10,
-                  right: 10,
-                }}
-                onClick={() => setVisibleMenu(!visibleMenu)}
-              >
-                <Close />
-              </IconButton>
-            )}
-          </Box>
-        </Box>
-      </Container>
-    </Box>
-  )
-}
+            alt="logo" // Альтернативный текст для изображения
+            src="assets/images/logo.svg"// Путь к изображению
+        />
+        <Box sx={{ display: { md:'flex', sm:'flex', xs:'none' }, justifyContent: "right",  flexWrap: 'wrap', gap: { md:2, sm:0, xs:0 }, width: '100%', marginRight: { md:10, sm:1, xs:1 }}}>
+            {menuContent.map((item, index) => (
+                <Box key={index} sx={{ display: 'flex', alignItems: "center", marginRight: { md:0, sm:1, xs:1}}}>
+                    <Link href={item.link} target="_blank" sx={{ textDecoration: 'none'}}>
+                        <Typography variant="body1"  sx={{ marginX: { md:2, sm:1 } }}>
+                            {item.title}
+                        </Typography>
+                    </Link>
+                </Box>
+            ))}
+            <Box     sx={{
+                display: 'flex', justifyContent: "right", alignItems: "center",
+                width: '107px',
+                height: '35px',
+                padding: '10px 12px',
+                borderRadius: '6px',
+                border: '2px solid #5CDCB5',
+            }}>
+                <Typography variant="body2" sx={{fontSize: 12}} >
+                   Попробовать
+                </Typography>
 
-export default Header
+            </Box>
+        </Box>
+    </Container>
+);
+
+export default Header;
