@@ -1,32 +1,8 @@
 import * as React from 'react';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
-import NextLink from 'next/link';
-import ProTip from '@/components/ProTip';
-import Copyright from '@/components/Copyright';
+import {MainScreen} from "@/components/main-screen";
 
 export default function Home() {
-  return (
-    <Container maxWidth="lg" sx={{backgroundColor: "#675784"}}>
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Typography variant="h4" component="h1" sx={{ mb: 2 }}>
-         rrr
-        </Typography>
-        <Link href="/about" color="secondary" component={NextLink}>
-rrr
-        </Link>
-        <ProTip />
-
-      </Box>
-    </Container>
-  );
+    return <>
+        <MainScreen/>
+    </>
 }
