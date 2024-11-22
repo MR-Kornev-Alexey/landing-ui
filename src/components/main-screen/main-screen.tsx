@@ -3,6 +3,7 @@ import {Box, Grid, Link, Typography} from '@mui/material';
 import Container from "@mui/material/Container";
 import ImgGradient from "@/components/main-screen/img-gradient";
 import "./main.css"
+import StartButton from "@/components/styled-button/start-button";
 
 const MainScreen: FC = () => {
     const content = [
@@ -33,22 +34,7 @@ const MainScreen: FC = () => {
                         </Typography>
                     </Box>
                     <Box>
-                        <Box
-                            sx={{
-                                display: 'flex',
-                                justifyContent: "right",
-                                alignItems: "center",
-                                width: '110px',
-                                height: '35px',
-                                padding: '10px 14px',
-                                borderRadius: '6px',
-                                backgroundColor: '#5CDCB5'
-                            }}
-                        >
-                            <Typography variant="subtitle2">
-                                Попробовать
-                            </Typography>
-                        </Box>
+                        <StartButton label="Попробовать"/>
                         <Box sx={{mt: 2}}>
                             <Typography variant="h3">
                                 Используй <span style={{color: "#5CDCB5"}}>все.</span> Плати <span

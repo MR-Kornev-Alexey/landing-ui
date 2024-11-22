@@ -4,6 +4,7 @@ import Container from "@mui/material/Container";
 import "./smart.css"
 import Vps from "@/components/smart/vps";
 import L1vestack from "@/components/smart/l1vestack";
+import StartButton from "@/components/styled-button/start-button";
 
 const Smart: FC = () => {
 
@@ -29,17 +30,27 @@ const Smart: FC = () => {
                 }}
             >
                 <Grid item xs={3} className="container_vps">
+                    <Typography>
+                    с VPS
+                    платишь за 100%
+                    </Typography>
                     <Vps/>
                     <div className="vps-not-used">Не используется</div>
-                    <div className="vps-app">Application</div>
-                    <div className="vps-software">Software</div>
-                    <div className="vps-os">OS</div>
+                    <div className="vps-app vps_common">Application</div>
+                    <div className="vps-software vps_common">Software</div>
+                    <div className="vps-os vps_common">OS</div>
                 </Grid>
-                <Grid item xs={3}>
+                <Grid item xs={3} className='container_l1vestack'>
+                    <Typography>
+                        с VPS
+                        платишь за 100%
+                    </Typography>
                     <L1vestack/>
+                    <div className="vps-software vps_common">Software</div>
+                    <div className="vps-os vps_common">OS</div>
                 </Grid>
                 <Grid item xs={5}>
-                <Typography variant="h5">
+                    <Typography variant="h5">
                         Умная тарификация
                     </Typography>
                     <Typography variant="h6">
@@ -48,6 +59,7 @@ const Smart: FC = () => {
                         Это возможно, потому что мы используем контейнеры. Они способны динамически увеличивать объём
                         предоставляемых ресурсов. Экспериментируйте без опасений!
                     </Typography>
+                    <StartButton label="Попробовать"/>
                 </Grid>
             </Grid>
         </Container>

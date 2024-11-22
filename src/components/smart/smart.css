@@ -1,26 +1,58 @@
 
 .container_vps {
-  position: relative;
+    position: relative;
 }
+
 .container_vps .vps-not-used {
-  position: absolute;
-  top: 128px;
-  left: 110px;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34px;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+    position: absolute;
+    top: 128px;
+    left: 110px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
 }
 
 .container_vps .vps-app {
-  position: absolute;
-  bottom: 161px;
-  left: 139px;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 34px;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: #C487C9;
+    bottom: 161px;
+    left: 139px;
+    color: #C487C9;
+}
+
+.container_vps .vps-software {
+    bottom: 86px;
+    left: 150px;
+    color: #C487C9;
+}
+
+.container_vps .vps-os {
+    bottom: 16px;
+    left: 179px;
+    color: #C487C9;
+}
+
+.vps_common {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    position: absolute;
+}
+
+.container_l1vestack {
+    position: relative;
+}
+
+.container_l1vestack .vps-software {
+    bottom: 38px;
+    left: 132px;
+    color: #6AB5A1;
+}
+
+.container_l1vestack .vps-os {
+    bottom: 1px;
+    left: 161px;
+    color: #6AB5A1;
 }
