@@ -24,7 +24,7 @@ const MainScreen: FC = () => {
                        marginTop: 8
                    }}
         >
-            <Grid container spacing={2}>
+            <Grid container >
                 <Grid item xs={5}
                       sx={{display: 'flex', flexDirection: "column", justifyContent: "space-between", maxHeight: 600}}>
                     <Box>
@@ -58,8 +58,8 @@ const MainScreen: FC = () => {
                     </Box>
                 </Grid>
                 <Grid item xs={7}
-                      sx={{display: 'flex', flexDirection: "column", justifyContent: "space-between", maxHeight: 600}}>
-                    <Box>
+                      sx={{display: 'flex', flexDirection: "column", justifyContent: "right", maxHeight: 600}}>
+                    <Box sx={{marginRight: { md:10, sm:1, xs:1 }}}>
                         <Box sx={{
                             display: 'flex',
                             justifyContent: 'right',

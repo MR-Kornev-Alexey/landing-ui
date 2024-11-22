@@ -6,7 +6,6 @@ const ImgGradient: React.FC = () => {
         return (
             <>
                 <Box className="media-object">
-                    <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <Box
                             component="img"
                             sx={{
@@ -17,9 +16,7 @@ const ImgGradient: React.FC = () => {
                             alt="logo" // Альтернативный текст для изображения
                             src="assets/images/main.png"// Путь к изображению
                         />
-                    </Box>
                 </Box>
-
             </>
         )
     }

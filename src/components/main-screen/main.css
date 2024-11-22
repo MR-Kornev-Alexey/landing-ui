@@ -16,8 +16,9 @@
 
 .media-object {
     --border-width: 1px;
-    --radius: 24px;
-
+    --radius: 16px;
+     max-width: 650px;
+    margin-left: 70px;
     position: relative;
     border-radius: var(--radius);
     border: var(--border-width) solid transparent;
@@ -87,7 +88,7 @@
     gap: 24px;
     width: 644px;
     padding: 32px;
-    border-radius: 24px;
+    border-radius: 16px;
     color: var(--text-color);
     background: var(--bg-color);
     border: 1px solid var(--border-color);
