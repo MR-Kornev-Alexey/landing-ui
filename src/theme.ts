@@ -57,19 +57,21 @@ const theme = createTheme({
             color: '#ffffff'
         },
         h4: {
-            fontSize: 22,
-            lineHeight: headingLineHeight,
-            fontWeight: 700,
+            fontSize: 60,
+            lineHeight: 1.2,
+            fontWeight: 300,
+            fontFamily: unbounded.style.fontFamily,
         },
         h5: {
-            fontSize: 17,
-            lineHeight: headingLineHeight,
-            fontWeight: 600,
+            fontSize: 28,
+            lineHeight: 1.3,
+            fontWeight: 400,
+            fontFamily: unbounded.style.fontFamily,
         },
         h6: {
-            fontSize: 15,
-            lineHeight: headingLineHeight,
-            fontWeight: 600,
+            fontSize: 20,
+            fontWeight: 400,
+            lineHeight: 1.5,
         },
         body1: {
             fontSize: 12,

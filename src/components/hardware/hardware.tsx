@@ -1,22 +1,19 @@
 import React, {FC} from 'react'
-import {Box, Grid, Link, Typography} from '@mui/material'
+import {Box, Grid,  Typography} from '@mui/material'
 import Container from "@mui/material/Container";
-import AnimatedLine from "@/components/banner/animated-line";
 
-const Banner: FC = () => {
+const Hardware: FC = () => {
 
 
     return (
         <Container maxWidth="lg" sx={{
-            height: 670,
+            height: 600,
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            flexDirection: 'column',
-            paddingTop: 10
+            flexDirection: 'column'
         }}>
 
-                <AnimatedLine />
 
             <Grid container spacing={2}
                   sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
@@ -37,9 +34,12 @@ const Banner: FC = () => {
                 </Grid>
             </Grid>
 
-            <Typography variant="h6" sx={{
-                marginTop: 5,
+            <Typography sx={{
+                fontSize: 20,
+                fontWeight: 400,
+                lineHeight: 1.5,
                 textAlign: 'center',
+                marginTop: 5
             }}>
                 L1veStack — платформа компании H3llo.Cloud для создания инфраструктуры на основе контейнеров.<br/>Она
                 поддерживает реализацию проектов любой сложности.<br/>В основе платформы три распределённых ЦОДа, один
@@ -49,4 +49,4 @@ const Banner: FC = () => {
     )
 }
 
-export default Banner
+export default Hardware
