@@ -25,7 +25,7 @@ const MainScreen: FC = () => {
                    }}
         >
             <Grid container >
-                <Grid item xs={5}
+                <Grid item md={5} sm={12} xs={12}
                       sx={{display: 'flex', flexDirection: "column", justifyContent: "space-between", maxHeight: 600}}>
                     <Box>
                         <Typography variant="h1">
@@ -57,27 +57,26 @@ const MainScreen: FC = () => {
                         </Box>
                     </Box>
                 </Grid>
-                <Grid item xs={7}
+                <Grid item md={7} sm={12} xs={12}
                       sx={{display: 'flex', flexDirection: "column", justifyContent: "right", maxHeight: 600}}>
-                    <Box sx={{marginRight: { md:10, sm:1, xs:1 }}}>
                         <Box sx={{
                             display: 'flex',
                             justifyContent: 'right',
-                            alignItems: 'center',
                             flexWrap: 'wrap',
-                            marginBottom: 2
+                            marginBottom: 2,
+                            maxWidth: 620,
+                            marginLeft: 13
                         }}>
                             {content.map((item, index) => (
-                                <Box key={index} className="button-tag">
+                                <Box key={index} className="button-tag-default">
                                     <Link href={item.link} target="_blank">
-                                        <Typography sx={{color: '#5CDCB5', fontSize: 14}}>
+                                        <span>
                                             {item.title}
-                                        </Typography>
+                                        </span>
                                     </Link>
                                 </Box>
                             ))}
                         </Box>
-                    </Box>
                     <ImgGradient/>
                 </Grid>
             </Grid>

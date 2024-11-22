@@ -1,7 +1,7 @@
 .card {
     isolation: isolate;
 }
-.button-tag{
+.button-tag-active{
     height: 34px;
     padding: 8px 12px 8px 12px;
     border-radius: 31px;
@@ -12,6 +12,26 @@
     align-items: center;
     white-space: nowrap;
     margin: 8px 6px;
+}
+.button-tag-active span {
+    color: #5CDCB5;
+    font-size: 14px;
+}
+.button-tag-default{
+    height: 34px;
+    padding: 8px 12px 8px 12px;
+    border-radius: 31px;
+    border: 1px solid #7C7C7C;
+    color: #7C7C7C;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin: 8px 6px;
+}
+.button-tag-default span {
+    color: #7C7C7C;
+    font-size: 14px;
 }
 
 .media-object {
