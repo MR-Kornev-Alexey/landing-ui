@@ -38,12 +38,15 @@ const theme = createTheme({
             fontFamily: unbounded.style.fontFamily,
         },
         h2: {
-            fontSize: 18,
-            lineHeight: 1.3,
-            fontWeight: 700,
+            fontSize: 60,
+            lineHeight: 1.1,
+            fontWeight: 300,
             textUnderlinePosition: 'from-font',
             textDecorationSkipInk: 'none',
+            textAlign: 'center',
             color: '#ffffff',
+            textTransform: 'uppercase',
+            fontFamily: unbounded.style.fontFamily
         },
         h3: {
             fontSize: 18,
@@ -51,7 +54,7 @@ const theme = createTheme({
             fontWeight: 700,
             textUnderlinePosition: 'from-font',
             textDecorationSkipInk: 'none',
-            color: '#ffffff',
+            color: '#ffffff'
         },
         h4: {
             fontSize: 22,
