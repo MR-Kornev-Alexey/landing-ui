@@ -29,14 +29,17 @@ const Smart: FC = () => {
                 }}
             >
                 <Grid item xs={3} className="container_vps">
-                    <Vps />
-                    <Typography >Не используется</Typography>
+                    <Vps/>
+                    <div className="vps-not-used">Не используется</div>
+                    <div className="vps-app">Application</div>
+                    <div className="vps-software">Software</div>
+                    <div className="vps-os">OS</div>
                 </Grid>
                 <Grid item xs={3}>
                     <L1vestack/>
                 </Grid>
                 <Grid item xs={5}>
-                    <Typography variant="h5">
+                <Typography variant="h5">
                         Умная тарификация
                     </Typography>
                     <Typography variant="h6">

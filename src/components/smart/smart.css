@@ -1,5 +1,26 @@
 
 .container_vps {
   position: relative;
+}
+.container_vps .vps-not-used {
+  position: absolute;
+  top: 128px;
+  left: 110px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
 
+.container_vps .vps-app {
+  position: absolute;
+  bottom: 161px;
+  left: 139px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #C487C9;
 }
