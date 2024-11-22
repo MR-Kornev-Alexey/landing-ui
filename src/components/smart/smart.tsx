@@ -18,7 +18,7 @@ const Smart: FC = () => {
             flexDirection: 'column'
         }}>
 
-            <Typography variant="h1">L1veStack лучше</Typography>
+            <Typography variant="h1" sx={{width: "100%", py: 6}}>L1veStack лучше</Typography>
             <Grid
                 container
                 spacing={2}
@@ -30,9 +30,9 @@ const Smart: FC = () => {
                 }}
             >
                 <Grid item xs={3} className="container_vps">
-                    <Typography>
-                    с VPS
-                    платишь за 100%
+                    <Typography className="subtitlereg_28 vps-title">
+                    с VPS <br/>
+                    платишь за <span style={{color: "#D978F5"}}>100%</span>
                     </Typography>
                     <Vps/>
                     <div className="vps-not-used">Не используется</div>
@@ -41,9 +41,9 @@ const Smart: FC = () => {
                     <div className="vps-os vps_common">OS</div>
                 </Grid>
                 <Grid item xs={3} className='container_l1vestack'>
-                    <Typography>
-                        с VPS
-                        платишь за 100%
+                    <Typography className="subtitlereg_28">
+                        c L1veStack <br/>
+                        только за <span style={{color: "#37FFC2"}}>100%</span>
                     </Typography>
                     <L1vestack/>
                     <div className="vps-software vps_common">Software</div>

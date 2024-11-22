@@ -3,6 +3,12 @@
     position: relative;
 }
 
+.vps-title {
+    position: absolute;
+    top: -81px;
+    left: 48px;
+}
+
 .container_vps .vps-not-used {
     position: absolute;
     top: 128px;
