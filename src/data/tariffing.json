@@ -1,0 +1,86 @@
+[
+  {
+    "tariff": {
+      "title": "Database1",
+      "cpu": "2vCPU",
+      "ram": "4Gb RAM",
+      "ssd": "40 Gb SSD",
+      "tariff": "1,2 P/ч",
+      "profit": "=854 Р/час"
+    },
+    "description": "Свободно распространяемая система управления содержимым сайта c открытым исходным кодом; написана на PHP; сервер базы данных — MySQL; выпущена под лицензией GNU GPL версии 2. Сфера применения— от блогов до достаточно сложных новостных ресурсов.",
+    "average": "459%",
+    "usage": [
+      {
+        "title": "Database",
+        "cpu": "2vCPU",
+        "ram": "4Gb RAM",
+        "ssd": "40 Gb SSD",
+        "tariff": "1,2 P/ч"
+      },
+      {
+        "title": "Site with CVS",
+        "cpu": "1vCPU",
+        "ram": "1Gb RAM",
+        "ssd": "40 Gb SSD",
+        "tariff": "0,42 P/ч"
+      },
+      {
+        "title": "Office Software",
+        "cpu": "8vCPU",
+        "ram": "8Gb RAM",
+        "ssd": "40 Gb SSD",
+        "tariff": "7,27 P/ч"
+      },
+      {
+        "title": "Other Software",
+        "cpu": "1vCPU",
+        "ram": "1Gb RAM",
+        "ssd": "40 Gb SSD",
+        "tariff": "0,32 P/ч"
+      }
+    ]
+  },
+  {
+    "tariff": {
+      "title": "Database2",
+      "cpu": "2vCPU",
+      "ram": "4Gb RAM",
+      "ssd": "40 Gb SSD",
+      "tariff": "1,2 P/ч",
+      "profit": "=854 Р/час"
+    },
+    "description": "Свободно распространяемая система управления содержимым сайта c открытым исходным кодом; написана на PHP; сервер базы данных — MySQL; выпущена под лицензией GNU GPL версии 2. Сфера применения— от блогов до достаточно сложных новостных ресурсов.",
+    "average": "459%",
+    "usage": [
+      {
+        "title": "Database",
+        "cpu": "2vCPU",
+        "ram": "4Gb RAM",
+        "ssd": "40 Gb SSD",
+        "tariff": "1,2 P/ч"
+      },
+      {
+        "title": "Site with CVS",
+        "cpu": "1vCPU",
+        "ram": "1Gb RAM",
+        "ssd": "40 Gb SSD",
+        "tariff": "0,42 P/ч"
+      },
+      {
+        "title": "Office Software",
+        "cpu": "8vCPU",
+        "ram": "8Gb RAM",
+        "ssd": "40 Gb SSD",
+        "tariff": "7,27 P/ч"
+      },
+      {
+        "title": "Other Software",
+        "cpu": "1vCPU",
+        "ram": "1Gb RAM",
+        "ssd": "40 Gb SSD",
+        "tariff": "0,32 P/ч"
+      }
+    ]
+  }
+]

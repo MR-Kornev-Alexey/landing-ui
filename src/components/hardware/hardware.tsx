@@ -1,50 +1,52 @@
 import React, {FC} from 'react'
-import {Box, Grid,  Typography} from '@mui/material'
+import {Box, Grid, Typography} from '@mui/material'
 import Container from "@mui/material/Container";
+import CurvedLine from "@/components/hardware/curved-line";
+
 
 const Hardware: FC = () => {
 
 
     return (
         <Container maxWidth="lg" sx={{
-            height: 600,
+            height: 670,
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            flexDirection: 'column'
+            position: 'relative'
         }}>
-
-
-            <Grid container spacing={2}
-                  sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                <Grid item xs={2}>
-                    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                        <Typography variant="h2"><span style={{color: "#D978F5"}}>l1ve</span><br/>stack</Typography>
-                    </Box>
-                </Grid>
-                <Grid item xs={1}>
-                    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginX: 2}}>
-                        <Typography variant="h2">+</Typography>
-                    </Box>
-                </Grid>
-                <Grid item xs={2}>
-                    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                        <Typography variant="h2">h3llo<span style={{color: "#5CDCB5"}}><br/>cloud</span></Typography>
-                    </Box>
-                </Grid>
-            </Grid>
-
-            <Typography sx={{
-                fontSize: 20,
-                fontWeight: 400,
-                lineHeight: 1.5,
-                textAlign: 'center',
-                marginTop: 5
+            <Grid container sx={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
             }}>
-                L1veStack — платформа компании H3llo.Cloud для создания инфраструктуры на основе контейнеров.<br/>Она
-                поддерживает реализацию проектов любой сложности.<br/>В основе платформы три распределённых ЦОДа, один
-                из которых мы создали собственными силами.
-            </Typography>
+                <Grid item md={6}>
+                    <Typography className="h1">Топовое</Typography>
+                    <Typography className="h1">железо</Typography>
+                    <Typography variant="h6" sx={{marginY: 1.5}}>Процессоры Intel Xeon 4th Gen</Typography>
+                    <Typography variant="h6" sx={{marginBottom: 1}}>Память DDR5</Typography>
+                    <Typography variant="h6">Блочное сетевое хранилище с трехкратной репликацией</Typography>
+                </Grid>
+
+                <Grid item md={6} sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}>
+                    <Box
+                        component="img"
+                        sx={{
+                            width: '100%', // Установите ширину изображения
+                            height: 'auto', // Автоматически подстраивает высоту под ширину
+                            maxWidth: 398, // Максимальная ширина изображения
+                        }}
+                        alt="logo" // Альтернативный текст для изображения
+                        src="assets/images/topHardware.svg"// Путь к изображению
+                    />
+                </Grid>
+
+            </Grid>
+            <CurvedLine/>
         </Container>
     )
 }

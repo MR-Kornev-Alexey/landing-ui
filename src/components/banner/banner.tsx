@@ -22,17 +22,17 @@ const Banner: FC = () => {
                   sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                 <Grid item xs={2}>
                     <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                        <Typography variant="h2"><span style={{color: "#D978F5"}}>l1ve</span><br/>stack</Typography>
+                        <Typography className="h1"><span style={{color: "#D978F5"}}>l1ve</span><br/>stack</Typography>
                     </Box>
                 </Grid>
                 <Grid item xs={1}>
                     <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginX: 2}}>
-                        <Typography variant="h2">+</Typography>
+                        <Typography className="h1">+</Typography>
                     </Box>
                 </Grid>
                 <Grid item xs={2}>
                     <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                        <Typography variant="h2">h3llo<span style={{color: "#5CDCB5"}}><br/>cloud</span></Typography>
+                        <Typography className="h1">h3llo<span style={{color: "#5CDCB5"}}><br/>cloud</span></Typography>
                     </Box>
                 </Grid>
             </Grid>

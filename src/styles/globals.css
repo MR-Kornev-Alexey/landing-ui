@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&display=swap');
+
 :root {
   --color-background: #f5f5f9;
   --color-scrollbar: rgb(224, 224, 224);
@@ -27,6 +29,36 @@ body {
   /* background-color: var(--color-background); */
   background-color: '#ffffff';
 }
+
+/*//// //////////////////////////////////////// */
+
+.h1 {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 66px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.subtitlereg_18 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.subtitlereg_20 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+}
 .subtitlereg_28 {
   font-size: 28px;
   font-weight: 400;
@@ -35,6 +67,7 @@ body {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
+
 
 
 .box-center {

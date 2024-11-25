@@ -13,10 +13,6 @@ const unbounded = Unbounded({
     subsets: ['latin', 'cyrillic'],
     display: 'swap',
 });
-
-
-const headingLineHeight = 1.4;
-
 const theme = createTheme({
     palette: {
         mode: 'dark',
@@ -33,28 +29,27 @@ const theme = createTheme({
         fontWeightBold: 700,
         h1: {
             fontSize: 60,
-            lineHeight: 1.2,
+            lineHeight: 1.1,
             fontWeight: 300,
             fontFamily: unbounded.style.fontFamily,
         },
         h2: {
-            fontSize: 60,
-            lineHeight: 1.1,
+            fontSize: 42,
+            lineHeight: 1.2,
             fontWeight: 300,
             textUnderlinePosition: 'from-font',
             textDecorationSkipInk: 'none',
-            textAlign: 'center',
             color: '#ffffff',
             textTransform: 'uppercase',
             fontFamily: unbounded.style.fontFamily
+
         },
         h3: {
-            fontSize: 18,
-            lineHeight: 1.3,
-            fontWeight: 700,
-            textUnderlinePosition: 'from-font',
-            textDecorationSkipInk: 'none',
-            color: '#ffffff'
+            fontSize: 36,
+            lineHeight: 1.25,
+            fontWeight: 400,
+            color: '#ffffff',
+            fontFamily: unbounded.style.fontFamily,
         },
         h4: {
             fontSize: 60,
