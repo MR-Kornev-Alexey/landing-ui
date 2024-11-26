@@ -3,7 +3,7 @@ import {Box, Grid, Link, Typography} from '@mui/material';
 import Container from "@mui/material/Container";
 import ImgGradient from "@/components/main-screen/img-gradient";
 import "./main.css"
-import StartButton from "@/components/styled-button/start-button";
+import StartButton from "@/app/ui/styled-button/start-button";
 
 const MainScreen: FC = () => {
     const content = [

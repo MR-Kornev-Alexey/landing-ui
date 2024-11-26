@@ -4,7 +4,7 @@ import Container from "@mui/material/Container";
 import "./smart.css"
 import Vps from "@/components/smart/vps";
 import L1vestack from "@/components/smart/l1vestack";
-import StartButton from "@/components/styled-button/start-button";
+import StartButton from "@/app/ui/styled-button/start-button";
 
 const Smart: FC = () => {
 

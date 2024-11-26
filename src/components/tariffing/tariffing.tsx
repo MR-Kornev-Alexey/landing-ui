@@ -4,53 +4,12 @@ import Container from '@mui/material/Container';
 import './tariffing.css';
 import details from '@/data/tariffing.json';
 import HorizontalScrollButtons from '@/components/tariffing/HorizontalScrollButtons';
+import CreateTable from "@/app/ui/table/table";
+import {TariffItem} from '@/interfaces/tariffing';
 
-interface TariffDetails {
-    title: string;
-    cpu: string;
-    ram: string;
-    ssd: string;
-    tariff: string;
-    profit: string;
-}
-
-interface TariffSimple {
-    title: string;
-    cpu: string;
-    ram: string;
-    ssd: string;
-    tariff: string;
-}
-
-interface TariffItem {
-    tariff: TariffDetails;
-    description: string;
-    average: string;
-    usage1?: TariffSimple;
-    usage2?: TariffSimple;
-    usage3?: TariffSimple; // Если используется, добавьте usage3 и usage4 по аналогии
-    usage4?: TariffSimple;
-}
-
-// Типизация для компонента Tariffing
 const Tariffing: FC = () => {
-    const content = [
-        {title: 'WordPress', link: '#'},
-        {title: 'Ghost', link: '#'},
-        {title: 'Grafana', link: '#'},
-        {title: 'Harness', link: '#'},
-        {title: 'Infisical', link: '#'},
-        {title: 'NocoDB', link: '#'},
-        {title: 'PostgreSQL', link: '#'},
-        {title: 'Grafana', link: '#'},
-        {title: 'Harness', link: '#'},
-        {title: 'Infisical', link: '#'},
-        {title: 'NocoDB', link: '#'},
-        {title: 'PostgreSQL', link: '#'},
-    ];
-
-    // Типизируем данные из JSON файла
-    const firstItem: TariffItem = details[0];// Предполагаем, что details - это массив объектов с типом TariffItem
+    // Предполагаем, что details — это массив объектов типа TariffItem
+    const firstItem: TariffItem = details[0];
 
     return (
         <Container
@@ -66,7 +25,20 @@ const Tariffing: FC = () => {
                 Не плати за лишнее
             </Typography>
 
-            <HorizontalScrollButtons content={content}/>
+            <HorizontalScrollButtons content={[
+                {title: 'WordPress', link: '#'},
+                {title: 'Ghost', link: '#'},
+                {title: 'Grafana', link: '#'},
+                {title: 'Harness', link: '#'},
+                {title: 'Infisical', link: '#'},
+                {title: 'NocoDB', link: '#'},
+                {title: 'PostgreSQL', link: '#'},
+                {title: 'Grafana', link: '#'},
+                {title: 'Harness', link: '#'},
+                {title: 'Infisical', link: '#'},
+                {title: 'NocoDB', link: '#'},
+                {title: 'PostgreSQL', link: '#'},
+            ]}/>
 
             <Container
                 sx={{
@@ -87,9 +59,7 @@ const Tariffing: FC = () => {
                     maxWidth: '90%',
                     borderColor: '#5F5F5F'
                 }}>
-                    <Typography variant="h3">
-                        Тарификация
-                    </Typography>
+                    <Typography variant="h3">Тарификация</Typography>
                     <Typography className="subtitlereg_18" sx={{color: '#7C7C7C', width: '100%', py: 3}}>
                         {firstItem.description}
                     </Typography>
@@ -117,16 +87,14 @@ const Tariffing: FC = () => {
                             </Box>
                         ))}
                     </Box>
-
-
                 </Box>
-                <Grid container sx={{
-                    display: 'flex',
-                    justifyContent: 'space-around',
+
+                <Grid container gap={2} sx={{
+                    justifyContent: 'center',
                     alignItems: 'center',
-                    marginTop: 6
+                    marginTop: 6,
                 }}>
-                    <Grid item md={4} sx={{
+                    <Grid item md={3} sx={{
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
@@ -134,17 +102,63 @@ const Tariffing: FC = () => {
                         width: 325,
                         height: 232,
                         backgroundColor: '#1F1F1F',
-                        borderRadius: '16px'
+                        borderRadius: '16px',
+                        mr: 2
                     }}>
-                        <Typography className="subtitlereg_20" sx={{width: 211, height: 68}}>Средняя выгода
-                            тарифа:</Typography>
+                        <Typography className="subtitlereg_20" sx={{width: 211, height: 68}}>
+                            Средняя выгода тарифа:
+                        </Typography>
                         <Typography variant="h2" sx={{ml: -8}}>{firstItem.average}</Typography>
                     </Grid>
 
-                    <Grid item md={8} sx={{
+                    <Grid item md={7} sx={{
                         display: 'flex',
                         justifyContent: 'center',
                         alignItems: 'center',
+                        flexDirection: 'column',
+                        width: 325,
+                        height: 232,
+                        backgroundColor: '#1F1F1F',
+                        borderRadius: '16px',
+                        ml: 2
+                    }}>
+                        {firstItem.usage ? (
+                            <CreateTable data={firstItem.usage}/>
+                        ) : (
+                            <Typography variant="h6" sx={{color: '#7C7C7C'}}>
+                                Нет данных о тарифах
+                            </Typography>
+                        )}
+                    </Grid>
+                </Grid>
+                <Grid container gap={2} sx={{
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    marginTop: 6,
+                }}>
+                    <Grid item md={5} sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        flexDirection: 'column',
+                        width: 531,
+                        height: 217,
+                        backgroundColor: '#37FFC2',
+                        borderRadius: '14px',
+                        mr: 2
+                    }}>
+                     </Grid>
+
+                    <Grid item md={5} sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        flexDirection: 'column',
+                        width: 531,
+                        height: 217,
+                        backgroundColor: '#E3B2F1',
+                        borderRadius: '14px',
+                        ml: 2,
                     }}>
 
                     </Grid>
