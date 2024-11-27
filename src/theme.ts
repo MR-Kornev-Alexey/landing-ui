@@ -40,9 +40,7 @@ const theme = createTheme({
             textUnderlinePosition: 'from-font',
             textDecorationSkipInk: 'none',
             color: '#ffffff',
-            textTransform: 'uppercase',
             fontFamily: unbounded.style.fontFamily
-
         },
         h3: {
             fontSize: 36,
@@ -52,9 +50,11 @@ const theme = createTheme({
             fontFamily: unbounded.style.fontFamily,
         },
         h4: {
-            fontSize: 60,
+            fontSize: 28,
             lineHeight: 1.2,
-            fontWeight: 300,
+            fontWeight: 400,
+            textUnderlinePosition: 'from-font',
+            textDecorationSkipInk: 'none',
             fontFamily: unbounded.style.fontFamily,
         },
         h5: {
@@ -104,9 +104,12 @@ const theme = createTheme({
     },
     breakpoints: {
         values: {
-            xs: 0,
+            xs: 320,
             sm: 600,
             md: 900,
+            // @ts-expect-error: новые брейкпойнты
+            mds: 1080,
+            lgs: 1080,
             lg: 1410,
             xl: 1600,
         },

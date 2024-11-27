@@ -1,7 +1,6 @@
 "use client"
 import React from 'react';
 import { Container, Box, Link, Typography } from '@mui/material';
-import Logo  from "@/image/logo.svg";
 
 const menuContent = [
     {
@@ -23,18 +22,19 @@ const menuContent = [
 ];
 
 const Header = () => (
-    <Container maxWidth="lg" component="header" sx={{ display: 'flex', justifyContent: { md:'space-between', sm:'space-between', xs:'left' }, alignItems: "center", height: 79, maxHeight: 79 }}>
+    <Container maxWidth="lg" component="header" sx={{ backgroundColor: "#000", pl: 6, display: 'flex', justifyContent: { md:'space-between', sm:'left', xs:'left' }, alignItems: "center", height: 79, maxHeight: 79 }}>
         <Box
             component="img"
             sx={{
+                ml:{ lg: 7, md:2, sm:0, xs:0},
                 width: '100%', // Установите ширину изображения
                 height: 'auto', // Автоматически подстраивает высоту под ширину
-                maxWidth:{ md:93, sm:70, xs:54 }, // Максимальная ширина изображения
+                maxWidth:{ lg: 93, md:93, sm:70, xs:54},
             }}
             alt="logo" // Альтернативный текст для изображения
             src="assets/images/logo.svg"// Путь к изображению
         />
-        <Box sx={{ display: { md:'flex', sm:'flex', xs:'none' }, justifyContent: "right",  flexWrap: 'wrap', gap: { md:2, sm:0, xs:0 }, width: '100%', marginRight: { md:10, sm:1, xs:1 }}}>
+        <Box sx={{ display: { md:'flex', sm:'none', xs:'none' }, justifyContent: "right",  flexWrap: 'wrap', gap: { md:2, sm:0, xs:0 }, width: '100%', marginRight: { md:4, sm:1, xs:1 }}}>
             {menuContent.map((item, index) => (
                 <Box key={index} sx={{ display: 'flex', alignItems: "center", marginRight: { md:0, sm:1, xs:1}}}>
                     <Link href={item.link} target="_blank" sx={{ textDecoration: 'none'}}>

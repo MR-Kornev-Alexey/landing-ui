@@ -3,7 +3,7 @@ import {Box, Grid, Link, Typography} from '@mui/material';
 import Container from "@mui/material/Container";
 import ImgGradient from "@/components/main-screen/img-gradient";
 import "./main.css"
-import StartButton from "@/app/ui/styled-button/start-button";
+import StartButton from "@/components/ui/styled-button/start-button";
 
 const MainScreen: FC = () => {
     const content = [
@@ -22,47 +22,47 @@ const MainScreen: FC = () => {
                        display: 'flex',
                        justifyContent: 'space-around',
                        alignItems: "center",
-                       marginTop: 8
                    }}
         >
-            <Grid container >
+            <Grid container>
                 <Grid item md={5} sm={12} xs={12}
-                      sx={{display: 'flex', flexDirection: "column", justifyContent: "space-between", maxHeight: 600}}>
+                      sx={{display: 'flex', flexDirection: "column", justifyContent: "space-between", maxHeight: 600, mt:3, paddingLeft: { lg:7,  md:3, sm:1, xs:1 }}}>
                     <Box>
-                        <Typography variant="h1">
-                            Платформа облачных контейнеров <span style={{color: "#5CDCB5"}}>L1vestack</span>
-                        </Typography>
+                        <div >
+                            <h1 className='h1-main'>
+                                Платформа облачных контейнеров <span style={{color: "#5CDCB5"}}>L1vestack</span>
+                            </h1>
+                        </div>
                     </Box>
-                    <Box>
+                    <Box sx={{pt: 2}}>
                         <StartButton label="Попробовать"/>
-                        <Box sx={{mt: 2}}>
-                            <Typography variant="h3">
+
+                            <Typography className="subtitlebold_18" sx={{mt:2}}>
                                 Используй <span style={{color: "#5CDCB5"}}>все.</span> Плати <span
                                 style={{color: "#5CDCB5"}}>только</span> когда используешь.
                             </Typography>
-                        </Box>
                     </Box>
                 </Grid>
                 <Grid item md={7} sm={12} xs={12}
-                      sx={{display: 'flex', flexDirection: "column", justifyContent: "right", maxHeight: 600}}>
-                        <Box sx={{
-                            display: 'flex',
-                            justifyContent: 'right',
-                            flexWrap: 'wrap',
-                            marginBottom: 2,
-                            maxWidth: 620,
-                            marginLeft: 13
-                        }}>
-                            {content.map((item, index) => (
-                                <Box key={index} className="button-tag-default">
-                                    <Link href={item.link} target="_blank">
+                      sx={{display: 'flex', flexDirection: "column", justifyContent: "right",  maxHeight: 600,   mt:8}}>
+                    <Box sx={{
+                        display: 'flex',
+                        justifyContent: 'right',
+                        flexWrap: 'wrap',
+                        marginBottom: 2,
+                        alignSelf: "flex-end",
+                        maxWidth: { lg:600,  md:460, sm:"100%", xs:"100%" },
+                    }}>
+                        {content.map((item, index) => (
+                            <Box key={index} className="button-tag-default">
+                                <Link href={item.link} target="_blank">
                                         <span>
                                             {item.title}
                                         </span>
-                                    </Link>
-                                </Box>
-                            ))}
-                        </Box>
+                                </Link>
+                            </Box>
+                        ))}
+                    </Box>
                     <ImgGradient/>
                 </Grid>
             </Grid>

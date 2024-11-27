@@ -44,6 +44,13 @@
     border: var(--border-width) solid transparent;
 }
 
+@media (max-width: 900px) {
+    .media-object {
+        max-width: 650px;
+        margin-left: 10px;
+    }
+}
+
 .media-object::before {
     content: " ";
     position: absolute;

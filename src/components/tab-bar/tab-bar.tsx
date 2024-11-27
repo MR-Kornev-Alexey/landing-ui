@@ -9,10 +9,10 @@ const TabBar: FC = () => {
 
     return (
         <Box component="header" sx={{
-            display: {md: 'none', sm: 'none', xs: 'flex'},
+            display: {md: 'none', sm: 'flex', xs: 'flex'},
             justifyContent: 'space-around',
             alignItems: "center",
-            height: {md: '106px', sm: '106px', xs: '66px'},
+            height: {md: '106px', sm: '66px', xs: '66px'},
             background: 'linear-gradient(270deg, #000000 0%, #131313 47.5%, #000000 100%)',
             position: 'fixed', // Фиксируем внизу экрана
             bottom: 0, // Прижимаем к нижней части экрана

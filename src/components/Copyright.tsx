@@ -11,6 +11,7 @@ export default function Copyright() {
                 whiteSpace: 'nowrap',
                 display: { md:'flex', sm:'none', xs:'none' },
                 justifyContent: "center",
+                paddingBottom: 2
             }}
         >
             {'Copyright © '}

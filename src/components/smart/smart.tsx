@@ -2,97 +2,84 @@ import React, {FC} from 'react'
 import {Box, Grid, Typography} from '@mui/material'
 import Container from "@mui/material/Container";
 import "./smart.css"
-import Vps from "@/components/smart/vps";
-import L1vestack from "@/components/smart/l1vestack";
-import StartButton from "@/app/ui/styled-button/start-button";
+import StartButton from "@/components/ui/styled-button/start-button";
 
 const Smart: FC = () => {
 
 
     return (
         <Container maxWidth="lg" sx={{
-            height: 670,
+            mt: 6,
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
             flexDirection: 'column'
         }}>
-
-            <Typography className="h1" sx={{width: "100%", py: 6, textAlign: 'center'}}>L1veStack лучше</Typography>
+            <Typography className="h1" sx={{
+                width: "100%",
+                mt: {lg: 6, mds: 5, md: 6, sm: 2, xs: 0},
+                mb: {lg: 6, mds: 5, md: 6, sm: 8, xs: 6},
+                textAlign: 'center'
+            }}>L1veStack лучше</Typography>
             <Grid
                 container
-                spacing={2}
-                sx={{
-                    width: "100%",
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "stretch",
-                }}
+                spacing={{lg: 2, mds: 2, md: 4}}
             >
                 {/* Первая колонка */}
                 <Grid
                     item
-                    xs={3}
-                    className="container_vps"
+                    xs={12}
+                    sm={12}
+                    md={6}
+                    lg={6}
                     sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "flex-end", // Прижать содержимое к низу
+                        marginLeft: {lg: 7, mds: 5, md: 4, sm: 0, xs: 0}
                     }}
                 >
-                    <Typography className="subtitlereg_28">
-                        с VPS <br />
-                        платишь за <span style={{ color: "#D978F5" }}>100%</span>
-                    </Typography>
-                    <Vps />
-                    <div className="vps-not-used">Не используется</div>
-                    <div className="vps-app vps_common">Application</div>
-                    <div className="vps-software vps_common">Software</div>
-                    <div className="vps-os vps_common">OS</div>
+                    <Box
+                        component="img"
+                        sx={{
+                            width: '100%', // Установите ширину изображения
+                            height: 'auto', // Автоматически подстраивает высоту под ширину
+                            maxWidth: {lg: 622, md: 622, sm: "100%", xs: "100%"}, // Максимальная ширина изображения
+                        }}
+                        alt="comparison" // Альтернативный текст для изображения
+                        src="assets/images/containers.svg"// Путь к изображению
+                    />
                 </Grid>
-
-                {/* Вторая колонка */}
                 <Grid
                     item
-                    xs={3}
-                    className="container_l1vestack"
+                    xs={12}
+                    sm={12}
+                    md={4}
                     sx={{
                         display: "flex",
                         flexDirection: "column",
-                        justifyContent: "flex-end", // Прижать содержимое к низу
-                    }}
-                >
-                    <Typography className="subtitlereg_28">
-                        c L1veStack <br />
-                        только за <span style={{ color: "#37FFC2" }}>100%</span>
-                    </Typography>
-                    <L1vestack />
-                    <div className="vps-software vps_common">Software</div>
-                    <div className="vps-os vps_common">OS</div>
-                </Grid>
-
-                {/* Третья колонка */}
-                <Grid
-                    item
-                    xs={5}
-                    sx={{
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "flex-start", // Прижать содержимое к верху
+                        justifyContent: "center", // Прижать содержимое к верху
                         alignItems: "flex-start",
+                        marginLeft: 2,
+                        marginTop: {lg: 4, mds: 2, md: 1, sm: 4, xs: 2}
                     }}
                 >
-                    <Typography variant="h5" sx={{ marginBottom: 4}}>Умная тарификация</Typography>
-                    <Typography variant="h6" sx={{ marginBottom: 3}}>
+                    <Typography variant="h4" sx={{marginBottom: {lg: 4, mds: 4, md: 2, xs: 3}}}>Умная
+                        тарификация</Typography>
+                    <Typography className="subtitlereg_20_not_size" sx={{
+                        marginBottom: {lg: 4, mds: 2, md: 1, xs: 4},
+                        fontSize: {lg: 20, mds: 17, md: 14, xs: 20}
+                    }}>
                         Мы работаем по модели pay as you use. То есть, учитываем только
                         использованные ресурсы, а не запрошенные при создании сервера.
                     </Typography>
-                    <Typography variant="h6" sx={{ marginBottom: 9}}>
+                    <Typography className="subtitlereg_20_not_size"
+                                sx={{
+                                    marginBottom: {lg: 9, mds: 4, md: 2, xs: 8},
+                                    fontSize: {lg: 20, mds: 17, md: 14, xs: 20}
+                                }}>
                         Это возможно, потому что мы используем контейнеры. Они способны
                         динамически увеличивать объём предоставляемых ресурсов.
                         Экспериментируйте без опасений!
                     </Typography>
-                    <StartButton label="Попробовать" />
+                    <StartButton label="Попробовать"/>
                 </Grid>
             </Grid>
 

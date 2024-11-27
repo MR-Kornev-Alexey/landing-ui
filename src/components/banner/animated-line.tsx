@@ -1,7 +1,13 @@
 import React from "react";
+import Container from "@mui/material/Container";
 
 const AnimatedLine: React.FC = () => {
     return (
+        <Container maxWidth="lg" sx={{
+            height: { lg:370,  md:160, sm:120, xs:120 },
+            display: 'flex',
+            alignItems: 'flex-end',
+        }}>
         <svg width="1000" height="80" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="paint0_linear" x1="8" y1="13.5" x2="1278.01" y2="13.5" gradientUnits="userSpaceOnUse">
@@ -17,6 +23,7 @@ const AnimatedLine: React.FC = () => {
                 </animateMotion>
             </circle>
         </svg>
+        </Container>
     );
 };
 

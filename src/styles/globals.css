@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
 :root {
-  --color-background: #f5f5f9;
+  --color-background: #313191;
   --color-scrollbar: rgb(224, 224, 224);
   --color-scrollbar-hover: #bbb;
 }
@@ -12,26 +16,34 @@
 }
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-corner {
-  background: var(--color-background);
+  background: var(--color-background)!important;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-scrollbar);
+  background: var(--color-scrollbar) !important;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-track,
 ::-webkit-scrollbar-corner {
-  background: var(--color-background);
+  background: var(--color-background)!important;
   border-radius: 10px;
 }
 
 body {
   /* background-color: var(--color-background); */
-  background-color: '#ffffff';
+  background-color: var(--color-background)!important;
 }
 
 /*//// //////////////////////////////////////// */
 
+.h1-main{
+  font-family: 'Unbounded', sans-serif;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 66px;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
 .h1 {
   font-family: 'Unbounded', sans-serif;
   font-size: 60px;
@@ -40,6 +52,28 @@ body {
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
+@media (max-width: 1260px) {
+  .h1-main {
+    font-size:60px;
+    font-weight: 400; /* Пример изменения стиля при ширине экрана 900px */
+    line-height: 56px; /* Пример изменения стиля при ширине экрана 900px */
+  }
+}
+@media (max-width: 1080px) {
+  .h1-main {
+    font-size: 44px;
+    font-weight: 400; /* Пример изменения стиля при ширине экрана 900px */
+    line-height: 50px; /* Пример изменения стиля при ширине экрана 900px */
+  }
+}
+@media (max-width: 900px) {
+  .h1-main,.h1{
+    font-size: 44px;
+    font-weight: 400; /* Пример изменения стиля при ширине экрана 900px */
+    line-height: 50px; /* Пример изменения стиля при ширине экрана 900px */
+  }
+}
+
 
 .subtitlereg_18 {
   font-size: 18px;
@@ -59,15 +93,74 @@ body {
   text-decoration-skip-ink: none;
 
 }
+.subtitlereg_20_not_size {
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+}
 .subtitlereg_28 {
   font-size: 28px;
   font-weight: 400;
   line-height: 35px;
-  text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
 
+.H4_bold {
+  font-family: 'Unbounded', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 35px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #000;
+}
+
+.subtitlebold_18{
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+
+.subtitlebold_32 {
+
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+
+.gradient-border {
+  position: relative;
+  background: #151414;
+  border: 3px solid transparent; /* Основной бордер */
+  background-clip: padding-box; /* Применяем градиент к бордеру */
+  padding: 24px; /* Отступы для демонстрации бордера */
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  margin: -3px; /* Толщина бордера */
+  background-image: linear-gradient(to right bottom, #69FCCF, #5F1058); /* Градиент */
+}
 
 
 .box-center {

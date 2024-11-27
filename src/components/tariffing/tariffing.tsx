@@ -1,14 +1,13 @@
-import React, {FC} from 'react';
-import {Box, Grid, Typography} from '@mui/material';
-import Container from '@mui/material/Container';
+import React, { FC } from 'react';
+import { Box, Container, Grid, Typography } from '@mui/material';
 import './tariffing.css';
 import details from '@/data/tariffing.json';
-import HorizontalScrollButtons from '@/components/tariffing/HorizontalScrollButtons';
-import CreateTable from "@/app/ui/table/table";
-import {TariffItem} from '@/interfaces/tariffing';
+import HorizontalScrollButtons from '@/components/tariffing/horizontal-scroll-buttons';
+import CreateTable from "@/components/ui/table/table";
+import { TariffItem } from '@/interfaces/tariffing';
+import TariffBox from '@/components/tariffing/tariff-box';
 
 const Tariffing: FC = () => {
-    // Предполагаем, что details — это массив объектов типа TariffItem
     const firstItem: TariffItem = details[0];
 
     return (
@@ -21,24 +20,24 @@ const Tariffing: FC = () => {
                 flexDirection: 'column',
             }}
         >
-            <Typography className="h1" sx={{width: '100%', py: 6, textAlign: 'center'}}>
+            <Typography className="h1" sx={{ width: '100%', py: 6, textAlign: 'center' }}>
                 Не плати за лишнее
             </Typography>
 
             <HorizontalScrollButtons content={[
-                {title: 'WordPress', link: '#'},
-                {title: 'Ghost', link: '#'},
-                {title: 'Grafana', link: '#'},
-                {title: 'Harness', link: '#'},
-                {title: 'Infisical', link: '#'},
-                {title: 'NocoDB', link: '#'},
-                {title: 'PostgreSQL', link: '#'},
-                {title: 'Grafana', link: '#'},
-                {title: 'Harness', link: '#'},
-                {title: 'Infisical', link: '#'},
-                {title: 'NocoDB', link: '#'},
-                {title: 'PostgreSQL', link: '#'},
-            ]}/>
+                { title: 'WordPress', link: '#' },
+                { title: 'Ghost', link: '#' },
+                { title: 'Grafana', link: '#' },
+                { title: 'Harness', link: '#' },
+                { title: 'Infisical', link: '#' },
+                { title: 'NocoDB', link: '#' },
+                { title: 'PostgreSQL', link: '#' },
+                { title: 'Grafana', link: '#' },
+                { title: 'Harness', link: '#' },
+                { title: 'Infisical', link: '#' },
+                { title: 'NocoDB', link: '#' },
+                { title: 'PostgreSQL', link: '#' },
+            ]} />
 
             <Container
                 sx={{
@@ -60,7 +59,7 @@ const Tariffing: FC = () => {
                     borderColor: '#5F5F5F'
                 }}>
                     <Typography variant="h3">Тарификация</Typography>
-                    <Typography className="subtitlereg_18" sx={{color: '#7C7C7C', width: '100%', py: 3}}>
+                    <Typography className="subtitlereg_18" sx={{ color: '#7C7C7C', width: '100%', py: 3 }}>
                         {firstItem.description}
                     </Typography>
                     <Box
@@ -105,10 +104,10 @@ const Tariffing: FC = () => {
                         borderRadius: '16px',
                         mr: 2
                     }}>
-                        <Typography className="subtitlereg_20" sx={{width: 211, height: 68}}>
+                        <Typography className="subtitlereg_20" sx={{ width: 211, height: 68 }}>
                             Средняя выгода тарифа:
                         </Typography>
-                        <Typography variant="h2" sx={{ml: -8}}>{firstItem.average}</Typography>
+                        <Typography variant="h2" sx={{ ml: -8 }}>{firstItem.average}</Typography>
                     </Grid>
 
                     <Grid item md={7} sx={{
@@ -123,45 +122,32 @@ const Tariffing: FC = () => {
                         ml: 2
                     }}>
                         {firstItem.usage ? (
-                            <CreateTable data={firstItem.usage}/>
+                            <CreateTable data={firstItem.usage} />
                         ) : (
-                            <Typography variant="h6" sx={{color: '#7C7C7C'}}>
+                            <Typography variant="h6" sx={{ color: '#7C7C7C' }}>
                                 Нет данных о тарифах
                             </Typography>
                         )}
                     </Grid>
                 </Grid>
+
                 <Grid container gap={2} sx={{
                     justifyContent: 'center',
                     alignItems: 'center',
                     marginTop: 6,
                 }}>
-                    <Grid item md={5} sx={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        flexDirection: 'column',
-                        width: 531,
-                        height: 217,
-                        backgroundColor: '#37FFC2',
-                        borderRadius: '14px',
-                        mr: 2
-                    }}>
-                     </Grid>
-
-                    <Grid item md={5} sx={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        flexDirection: 'column',
-                        width: 531,
-                        height: 217,
-                        backgroundColor: '#E3B2F1',
-                        borderRadius: '14px',
-                        ml: 2,
-                    }}>
-
-                    </Grid>
+                    <TariffBox
+                        title="CPU"
+                        subtitle="₽/час"
+                        imageSrc="assets/images/grafic_rose.svg"
+                        backgroundColor="#E3B2F1"
+                    />
+                    <TariffBox
+                        title="RAM"
+                        subtitle="₽/час"
+                        imageSrc="assets/images/grafic_green.svg"
+                        backgroundColor="#37FFC2"
+                    />
                 </Grid>
             </Container>
         </Container>

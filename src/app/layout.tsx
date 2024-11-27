@@ -8,6 +8,7 @@ import {Header} from '@/components/header'
 import '../styles/globals.css'
 import Copyright from "@/components/Copyright";
 import TabBar from "@/components/tab-bar/tab-bar";
+import 'normalize.css'; // Импортируем normalize.css
 
 export default function RootLayout(props: { children: React.ReactNode }) {
     return (

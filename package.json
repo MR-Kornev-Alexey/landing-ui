@@ -17,6 +17,7 @@
     "@mui/material": "latest",
     "@mui/material-nextjs": "latest",
     "next": "latest",
+    "normalize.css": "^8.0.1",
     "react": "latest",
     "react-dom": "latest",
     "react-scroll": "^1.9.0",

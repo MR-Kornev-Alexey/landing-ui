@@ -1,41 +1,102 @@
 import React, {FC} from 'react'
-import {Box, Grid, Link, Typography} from '@mui/material'
+import {Grid,  Typography} from '@mui/material'
 import Container from "@mui/material/Container";
-import AnimatedLine from "@/components/banner/animated-line";
 
 const Banner: FC = () => {
 
 
     return (
         <Container maxWidth="lg" sx={{
-            height: 670,
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
             flexDirection: 'column',
-            paddingTop: 10
+            paddingBottom:10
         }}>
-
-                <AnimatedLine />
-
-            <Grid container spacing={2}
-                  sx={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                <Grid item xs={2}>
-                    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                        <Typography className="h1"><span style={{color: "#D978F5"}}>l1ve</span><br/>stack</Typography>
-                    </Box>
+            <Grid
+                container
+                spacing={2}
+                sx={{
+                    flex: 1,
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}
+            >
+                <Grid
+                    item
+                    xs={12}
+                    sm={4}
+                    md={3}
+                    lg={2}
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                    }}
+                >
+                    <Typography
+                        className="h1"
+                        sx={{
+                            textTransform: "uppercase",
+                            textAlign: "center"
+                        }}
+                    >
+                        <span style={{ color: "#D978F5" }}>l1ve</span>
+                        <br />
+                        stack
+                    </Typography>
                 </Grid>
-                <Grid item xs={1}>
-                    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginX: 2}}>
-                        <Typography className="h1">+</Typography>
-                    </Box>
+
+                <Grid
+                    item
+                    xs={12}
+                    sm={2}
+                    md={1}
+                    lg={1}
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                    }}
+                >
+                    <Typography
+                        className="h1"
+                        sx={{
+                            textTransform: "uppercase"
+                        }}
+                    >
+                        +
+                    </Typography>
                 </Grid>
-                <Grid item xs={2}>
-                    <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                        <Typography className="h1">h3llo<span style={{color: "#5CDCB5"}}><br/>cloud</span></Typography>
-                    </Box>
+
+                <Grid
+                    item
+                    xs={12}
+                    sm={4}
+                    md={3}
+                    lg={2}
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                    }}
+                >
+                    <Typography
+                        className="h1"
+                        sx={{
+                            textTransform: "uppercase",
+                            textAlign: "center"
+                        }}
+                    >
+                        h3llo
+                        <span style={{ color: "#5CDCB5" }}>
+                <br />
+                cloud
+            </span>
+                    </Typography>
                 </Grid>
             </Grid>
+
 
             <Typography variant="h6" sx={{
                 marginTop: 5,

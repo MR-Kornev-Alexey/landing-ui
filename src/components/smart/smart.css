@@ -1,40 +1,57 @@
 
-.container_vps {
-    position: relative;
-}
-
 .vps-title {
     position: absolute;
     top: -81px;
     left: 48px;
 }
 
-.container_vps .vps-not-used {
+.vps-not-used {
     position: absolute;
-    top: 201px;
-    left: 104px;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 34px;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
+    top: 223px;
+    left: 107px;
 }
 
-.container_vps .vps-app {
-    bottom: 161px;
-    left: 139px;
+.vps-title {
+    position: absolute;
+    top: 12px;
+    left: 47px;
+    text-align: center;
+}
+
+.l1vestack-title {
+    position: absolute;
+    top: 13px;
+    right: 40px;
+    text-align: center;
+}
+
+.vps-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.l1vestack-img {
+    position: absolute;
+    bottom: 0;
+    left: 320px;
+}
+
+.vps-app {
+    bottom: 153px;
+    left: 119px;
     color: #C487C9;
 }
 
-.container_vps .vps-software {
-    bottom: 86px;
-    left: 150px;
+.vps-software {
+    bottom: 77px;
+    left: 128px;
     color: #C487C9;
 }
 
-.container_vps .vps-os {
-    bottom: 16px;
-    left: 179px;
+.vps-os {
+    bottom: 10px;
+    left: 158px;
     color: #C487C9;
 }
 
@@ -47,18 +64,17 @@
     position: absolute;
 }
 
-.container_l1vestack {
-    position: relative;
-}
 
-.container_l1vestack .vps-software {
-    bottom: 38px;
-    left: 132px;
+.l1vestack-software {
+    bottom: 36px;
+    right: 85px;
     color: #6AB5A1;
+    position: absolute;
 }
 
-.container_l1vestack .vps-os {
+.l1vestack-os {
     bottom: 1px;
-    left: 161px;
+    right: 114px;
     color: #6AB5A1;
+    position: absolute;
 }
